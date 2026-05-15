@@ -109,4 +109,4 @@ echo
 screen -ls
 
 ######## important trash
-export GOOGLE_APPLICATION_CREDENTIALS=~/.config/gcloud/legacy_credentials/*/adc.json
+export GOOGLE_APPLICATION_CREDENTIALS=$HOME/.config/gcloud/application_default_credentials.json
