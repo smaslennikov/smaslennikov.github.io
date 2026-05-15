@@ -4,6 +4,22 @@ title: Recipes
 permalink: /recipes
 ---
 
+
+<!-- toc -->
+
+- [Foods](#foods)
+    * [Gluten-free Filipino garlic fried rice](#gluten-free-filipino-garlic-fried-rice)
+    * [Gluten-free Filipino fried chicken](#gluten-free-filipino-fried-chicken)
+    * [Gluten-free Duck stuffed with apples and oranges](#gluten-free-duck-stuffed-with-apples-and-oranges)
+    * [Gluten-free chicken thighs with a side of vegetables](#gluten-free-chicken-thighs-with-a-side-of-vegetables)
+    * [Gluten-free orecchiette with broccoli rabe and sausage](#gluten-free-orecchiette-with-broccoli-rabe-and-sausage)
+    * [Russian kotleta](#russian-kotleta)
+    * [Miso soup](#miso-soup)
+- [Drinks](#drinks)
+    * [Glühwein (Mulled Wine)](#gluhwein-mulled-wine)
+
+<!-- tocstop -->
+
 # Foods
 
 ## Gluten-free Filipino garlic fried rice
@@ -59,6 +75,38 @@ Coating:
 1. Fill a sauce pan with about an inch of oil. Heat on medium-high to 175C.
 1. Shake off excess coating and drop chicken into the oil. Don't overcrowd the pot. Fry until golden brown (15-20 minutes), turning once.
 1. Place cooked pieces on a wire sheet to drain off excess oil. Let rest before serving.
+
+## Gluten-free Duck stuffed with apples and oranges
+
+**Ingredients:**
+
+- 1 apple (large, hard, green apples are best)
+- 1 orange
+- Some grapes
+- 1 packet of hmeli-suneli
+
+**Cooking:**
+
+TODO
+
+## Gluten-free chicken thighs with a side of vegetables
+
+TODO
+
+## Gluten-free orecchiette with broccoli rabe and sausage
+
+TODO
+
+## Russian kotleta
+
+1lb spicy italian sausage
+1lb beef
+half an onion, chopped
+4 garlic cloves, minced
+
+## Miso soup
+
+https://www.allrecipes.com/recipe/13107/miso-soup/
 
 # Drinks
 
