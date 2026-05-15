@@ -7,7 +7,7 @@ VAULT_PASSWORD_FILE=secret/vault_password
 
 ENCRYPTABLE=$(VAULT_PASSWORD_FILE) #rhymes/cigarettes rhymes/slavery
 
-include $(shell test -d $(GITROOT)/include.mk/ || git clone git@github.com:smaslennikov/include.mk.git && echo $(GITROOT))/include.mk/*.mk
+include $(shell test -d $(GITROOT)/include.mk/ || git submodule add git@github.com:slavaaaaaaaaaa/include.mk.git include.mk && echo $(GITROOT))/include.mk/*.mk
 
 define RECIPIENTS
 -r me@slava.lol

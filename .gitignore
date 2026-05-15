@@ -1,6 +1,6 @@
 *.log
 *.aux
-include.mk
+**/.DS_Store
 
 secret/vault_password
 
