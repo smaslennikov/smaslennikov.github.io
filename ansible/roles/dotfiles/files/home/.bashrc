@@ -9,7 +9,7 @@ esac
 export GEM_HOME="$HOME/gems"
 export GOPATH=$HOME/go
 export LD_LIBRARY_PATH=/usr/local/lib
-export PATH="$HOME/bin:$HOME/local/bin:/usr/local/bin:$HOME/adb-fastboot/platform-tools:$HOME/gems/bin:$PATH:$HOME/.local/bin:$PATH:/sbin:/usr/sbin/:/usr/local/go/bin:$HOME/.local/bin:$HOME/go/bin"
+export PATH="$HOME/bin:$HOME/local/bin:/usr/local/bin:$HOME/adb-fastboot/platform-tools:$HOME/gems/bin:$PATH:$HOME/.local/bin:$PATH:/sbin:/usr/sbin/:/usr/local/go/bin:$HOME/.local/bin:$HOME/go/bin:/opt/homebrew/share/google-cloud-sdk/bin:/opt/homebrew/opt/libpq/bin"
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(rbenv init - --no-rehash zsh)"
@@ -39,6 +39,9 @@ fi
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
+
+[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
+
 
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 [ -f /etc/profile.d/bash_completion.sh ] && . /etc/profile.d/bash_completion.sh
