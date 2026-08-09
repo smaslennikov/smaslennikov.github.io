@@ -4,52 +4,102 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
 
 {% seo %}
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+          href="{{ "/assets/fonts/ibm-plex-sans-latin-wght-normal.woff2" | relative_url }}">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+          href="{{ "/assets/fonts/source-serif-4-latin-wght-normal.woff2" | relative_url }}">
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
     <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/rss.xml" | relative_url }}">
+    <script>
+      // Applied before first paint so the correct theme renders immediately.
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          if (t === "light" || t === "dark") {
+            document.documentElement.setAttribute("data-theme", t);
+          }
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <button class="theme-toggle" type="button" aria-label="Toggle colour theme" title="Toggle colour theme">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="4"></circle>
+        <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+      </svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
+      </svg>
+    </button>
+
     <div class="wrapper">
-    <section>
+      <header class="rail">
+        <div class="rail__top">
+          <a class="identity" href="{{ "/" | relative_url }}">
+            {% if site.logo %}
+              <img class="identity__avatar" src="{{ site.logo | relative_url }}" alt="" width="64" height="64">
+            {% endif %}
+            <span>
+              <span class="identity__name">{{ site.title }}</span>
+              <span class="identity__role">{{ site.description | default: site.github.project_tagline }}</span>
+            </span>
+          </a>
 
-      {{ content }}
+          <nav aria-label="Site">
+            <ul class="rail__nav">
+              {% for item in site.data.nav %}
+                {% assign here = false %}
+                {% if page.url == item.url %}{% assign here = true %}{% endif %}
+                <li>
+                  <a href="{{ item.url | relative_url }}"{% if here %} aria-current="page"{% endif %}>{{ item.name }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </nav>
+        </div>
 
-    </section>
-    <header>
-      <h1><a href="{{ "/" | absolute_url }}">{{ site.title }}</a></h1>
-      <p><b>{{ site.description | default: site.github.project_tagline }}</b></p>
-      {% if site.logo %}
-        <a href="{{ "/" | absolute_url }}"><img class="front_profile" src="{{site.logo | relative_url}}" alt="Logo" /></a>
-      {% endif %}
-      <p class="pre">
-you're not your job
+        <div class="rail__bottom">
+        <p class="creed">you're not your job
 you're not how much money you have
 you're not the car you drive
 you're not the contents of your wallet
 you're not the opinions of your company
-and neither is this site
-      </p>
-      <p>
-        <a style="padding: 0 0 0 10px;" target="_blank" rel="noopener noreferrer" href="https://www.goodreads.com/user/show/58696139-slava-maslennikov"><img src="https://d.gr-assets.com/misc/1454549125-1454549125_goodreads_misc.png" width=48 height=48 /></a>
-        <a style="padding: 0 0 0 10px;" target="_blank" rel="noopener noreferrer" href="https://keybase.io/smaslennikov"><img src="/assets/keybase.png" width=48 height=48 /></a>
-        <a style="padding: 0 0 0 10px;" target="_blank" rel="noopener noreferrer" href="https://lichess.org/@/slobbber"><img src="https://images.prismic.io/lichess/f54baa80-94ed-4ba1-b42b-afd818ec4b64_Horseybig.png" width=48 height=48 /></a>
-      </p>
-        <a style="padding: 0 0 0 10px;" target="_blank" rel="noopener noreferrer" href="https://discordapp.com/users/267834137837174784"><img src="/assets/discord.svg" width="48" height="48"></a>
-        <a style="padding: 0 0 0 10px;" target="_blank" rel="noopener noreferrer" href="https://signal.me/#eu/-cRKWO2bj7TEeOzXsIU73cpGcs-oxDeCFUfpmRyrDCGEHN6u7zVNs6ind1iyg8E2"><img src="/assets/signal.svg" width="48" height="48"></a>
-        <a style="padding: 0 0 0 10px;" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/slavaaa/"><img src="/assets/li.svg" width="48" height="48"></a>
-      </p>
-      <p>
-        <a style="padding: 0 0 0 10px;" target="_blank" rel="noopener noreferrer" href="{{ site.github.owner_url }}"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width=48 height=48 /></a>
-        <a style="padding: 0 0 0 10px;" target="_blank" rel="noopener noreferrer" href="https://gitlab.com/slavaa"><img src="/assets/gitlab.png" width=48 height=48 /></a>
-        <a style="padding: 0 0 0 10px;" target="_blank" rel="noopener noreferrer" href="/rss.xml"><img src="/assets/rss.png" width=48 height=48 /></a>
-      </p>
-    </header>
+and neither is this site</p>
+
+        <ul class="social">
+          {% for link in site.data.social %}
+            <li>
+              <a href="{{ link.url | relative_url }}" aria-label="{{ link.label }}" title="{{ link.label }}"
+                 {% unless link.name == "rss" %}target="_blank" rel="noopener noreferrer me"{% endunless %}>
+                <svg viewBox="{{ link.viewbox }}" fill="currentColor" aria-hidden="true" focusable="false">
+                  <path d="{{ link.path }}"></path>
+                </svg>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+
+        <div class="rail__foot">
+          <a href="mailto:me@slava.lol?Subject=beer%20time">me@slava.lol</a><br>
+          <a href="https://github.com/slavaaaaaaaaaa/smaslennikov.github.io" target="_blank" rel="noopener noreferrer">source</a> &middot;
+          <a href="https://keybase.io/smaslennikov/pgp_keys.asc" target="_blank" rel="noopener noreferrer">pgp</a>
+        </div>
+        </div>
+      </header>
+
+      <main class="content" id="content">
+        {{ content }}
+      </main>
     </div>
-    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+
+    <script src="{{ "/assets/js/site.js" | relative_url }}" defer></script>
     {% if site.google_analytics %}
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

@@ -2,14 +2,21 @@
 layout: default
 ---
 
-<p>{{ page.date | date: "%-d %B %Y" }}</p>
-<h1>{{ page.title }}</h1>
-<p class="view">by {{ page.author | default: site.author }}</p>
+<article>
+  <header class="post-head">
+    <p class="post-head__meta">
+      <span>{{ page.date | date: "%-d %B %Y" }}</span>
+      <span>{{ page.author | default: site.author }}</span>
+    </p>
+    <h1>{{ page.title }}</h1>
+    {% if page.haiku %}
+      <p class="post-head__haiku">{{ page.haiku }}</p>
+    {% endif %}
+  </header>
 
-{% if page.haiku %}
-<p class="pre" align="right"><i>
-    {{page.haiku}}
-</i></p>
-{% endif %}
+  {{ content }}
 
-{{content}}
+  <footer class="post-foot">
+    <a href="{{ "/" | relative_url }}">&larr; all writing</a>
+  </footer>
+</article>

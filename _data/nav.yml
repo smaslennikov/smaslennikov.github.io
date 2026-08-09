@@ -1,0 +1,18 @@
+- name: home
+  url: /
+- name: garage
+  url: /garage
+- name: cameras
+  url: /cameras
+- name: recipes
+  url: /recipes
+- name: bookshelf
+  url: /books
+- name: rhymes
+  url: /haikus
+- name: beer labels
+  url: /beers
+- name: memes
+  url: /in_emergency
+- name: resume
+  url: /docs/resume/resume.pdf

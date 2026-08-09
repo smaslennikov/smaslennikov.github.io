@@ -2,12 +2,18 @@
 layout: default
 ---
 
-<ul class="images">
+<h1>{{ page.title }}</h1>
+
+{{ content }}
+
+<ul class="gallery">
   {% for image in site.static_files %}
     {% if image.path contains page.path %}
-      <li><a href="{{ image.path }}"><img src="{{ image.path }}" height={{ page.height }}></a></li>
+      <li>
+        <a href="{{ image.path | relative_url }}">
+          <img src="{{ image.path | relative_url }}" alt="" loading="lazy">
+        </a>
+      </li>
     {% endif %}
   {% endfor %}
 </ul>
-
-<br />

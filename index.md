@@ -1,19 +1,21 @@
-# [I am Slava](mailto:me@slava.lol?Subject=beer%20time) ![](https://github.com/slavaaaaaaaaaa/smaslennikov.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
+# [I am Slava](mailto:me@slava.lol?Subject=beer%20time)
 
 Check out my [resume](docs/resume/resume.pdf)!
 
 ## Blog posts
 
-<table class="posts">
+<ul class="post-list">
 {% for post in site.posts %}
-  <tr>
   {% if post.tag == "blag" %}
-    <th><li><a href="{{ post.url }}">{{ post.title }}</a></li></th>
-    <th>{{ post.date | date: "%m/%d/%Y" }}</th>
+  <li>
+    <a href="{{ post.url | relative_url }}">
+      <span class="post-list__title">{{ post.title }}</span>
+      <span class="post-list__date">{{ post.date | date: "%Y-%m-%d" }}</span>
+    </a>
+  </li>
   {% endif %}
-  </tr>
 {% endfor %}
-</table>
+</ul>
 
 ## Talks and workshops
 
@@ -56,13 +58,11 @@ Check out my [resume](docs/resume/resume.pdf)!
 
 ## City guides
 
-<ul>
+<ul class="chips">
 {% for post in site.posts %}
-  <tr>
   {% if post.tag == "guide" %}
-    <th><li><a href="{{ post.url }}">{{ post.title }}</a></li></th>
+  <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
   {% endif %}
-  </tr>
 {% endfor %}
 </ul>
 
@@ -80,3 +80,7 @@ Sorted by most updated:
 * Vetsin does [infosec stuff](http://0x.c0ffee.me/)
 * Naftuli Kay writes about [engineering](https://naftuli.wtf)
 * [Javelang](https://javelang.com/) is the future of programming
+
+---
+
+![Pages build status](https://github.com/slavaaaaaaaaaa/smaslennikov.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)

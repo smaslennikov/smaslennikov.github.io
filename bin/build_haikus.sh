@@ -11,10 +11,13 @@ for file in *; do
         name=$(echo $file | sed -e 's/.txt//' -e 's/_/ /g')
         author=$(git show --format="%aN" $(git blame $file | head -n1 | cut -d" " -f 1) | head -n1)
         date=$(git show --format="%ai" $(git blame $file | head -n1 | cut -d" " -f 1) | head -n1 | cut -d" " -f 1,2 | sed -e 's/ /T/')
-        lines=$(cat $file | wc -l)
-        height=$(printf %.$2f $(echo "-0.88393+28.79464*$lines-0.8779762*$lines^2+0.01488095*$lines^3" | bc))
+        slug=$(echo $file | sed -e 's/.txt//')
 
-        echo -e "hello the pizza is ready $date<h4><a href=\"https://github.com/slavaaaaaaaaaa/smaslennikov.github.io/blob/master/rhymes/$file\">$name</a> by $author on $date</h4><embed src=\"rhymes/$file\" height="$height" width=470>" >> $indextmpfile
+        # HTML-escape the poem, then fold it onto a single line: sorting below is
+        # line-based, and <pre> renders &#10; back into the original line breaks.
+        body=$(sed -e 's/&/\&amp;/g' -e 's/</\&lt;/g' -e 's/>/\&gt;/g' -e 's/$/\&#10;/' $file | tr -d '\n')
+
+        echo -e "hello the pizza is ready $date<article class=\"rhyme\" id=\"$slug\"><h2 class=\"rhyme__title\"><a href=\"https://github.com/slavaaaaaaaaaa/smaslennikov.github.io/blob/master/rhymes/$file\">$name</a></h2><p class=\"rhyme__meta\">$author &middot; $date</p><pre class=\"rhyme__body\">$body</pre></article>" >> $indextmpfile
 
         echo "
   <item>
@@ -30,7 +33,10 @@ cat <<EOF > ../_layouts/rhymes.html
 layout: default
 ---
 
-<a href="https://slava.lol/rhymes/rss.xml"><img src="https://slava.lol/rss.png" width=16 height=16 /></a> Rhymes and Haikus
+<div class="rhymes__head">
+  <h1>Rhymes and haikus</h1>
+  <p><a href="https://slava.lol/rhymes/rss.xml">subscribe via rss</a></p>
+</div>
 EOF
 
 cat <<EOF > rss.xml
@@ -43,7 +49,7 @@ cat <<EOF > rss.xml
   <copyright>2017-2020 Slava Maslennikov. All rights reserved.</copyright>
 EOF
 
-sort -k6 -r $indextmpfile | sed -e 's/^.*<h4>/<h4>/g' | sed -e 's/\(....-..-..\)T\(.*\)/\1 \2/' -e 's/Z$//' >> ../_layouts/rhymes.html
+sort -k6 -r $indextmpfile | sed -e 's/^.*<article/<article/g' | sed -e 's/\(....-..-..\)T\([0-9:]*\)/\1 \2/' -e 's/Z$//' >> ../_layouts/rhymes.html
 
 cat $rsstmpfile >> rss.xml
 
