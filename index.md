@@ -19,7 +19,10 @@ Check out my [resume](docs/resume/resume.pdf)!
 
 | Year | Topic |
 |-|-|
-| 2025 | [Meshtastic Workshop @ BSsidesPDX '25](https://meshsides.coolconsulting.lol/) |
+| 2026 | [Broadcast, Don't Chat @ BSides Las Vegas '26](https://coolconsulting.lol/talks/bsideslv-26/) (upcoming) |
+| 2026 | [Hands-on mesh networking: Meshtastic Workshop @ BSides Seattle '26](https://coolconsulting.lol/workshops/bsides-seattle-26/) |
+| 2026 | [Building a mesh node from a kit: Meshtastic Workshop @ SCaLE 23x](https://coolconsulting.lol/workshops/scale-23x/) |
+| 2025 | [Meshtastic Workshop @ BSidesPDX '25](https://coolconsulting.lol/workshops/bsidespdx-25/) |
 | 2025 | [From walkie-talkies to Meshtastic: an overview on communication platforms](https://www.youtube.com/watch?v=2E05D_vZJ-A) |
 | 2025 | [Can you hear me now? A survey of communications platforms during emergencies](https://www.youtube.com/watch?v=1ESF30ohXro) |
 | 2025 | [Engineering Culture: creating, maintaining, identifying a high quality technical environment](http://layerone.slava.lol/) |
@@ -42,14 +45,14 @@ Check out my [resume](docs/resume/resume.pdf)!
 
 ## Resources
 
-* My [recipes](recipes)
-* My [bookshelf](books)
 * My [garage](garage)
 * My [cameras](cameras)
+* My [recipes](recipes)
+* My [bookshelf](books)
 * My [cats](https://devopscat.com/selfies)
-* Some [haikus and rhymes](haikus)
-* [Beer and kombucha labels](beers)
-* In emergency, [break open](in_emergency)
+* My [haikus](haikus)
+* My [beer and kombucha labels](beers)
+* My [memes](in_emergency)
 
 ## City guides
 
