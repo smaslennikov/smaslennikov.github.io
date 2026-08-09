@@ -19,7 +19,7 @@ Check out my [resume](docs/resume/resume.pdf)!
 
 | Year | Topic |
 |-|-|
-| 2026 | [Broadcast, Don't Chat @ BSides Las Vegas '26](https://coolconsulting.lol/talks/bsideslv-26/) (upcoming) |
+| 2026 | [Broadcast, Don't Chat @ BSides Las Vegas '26](https://coolconsulting.lol/talks/bsideslv-26/) |
 | 2026 | [Hands-on mesh networking: Meshtastic Workshop @ BSides Seattle '26](https://coolconsulting.lol/workshops/bsides-seattle-26/) |
 | 2026 | [Building a mesh node from a kit: Meshtastic Workshop @ SCaLE 23x](https://coolconsulting.lol/workshops/scale-23x/) |
 | 2025 | [Meshtastic Workshop @ BSidesPDX '25](https://coolconsulting.lol/workshops/bsidespdx-25/) |
