@@ -42,13 +42,13 @@ Check out my [resume](docs/resume/resume.pdf)!
 
 ## Resources
 
-* [Recipes](recipes)
+* My [recipes](recipes)
+* My [bookshelf](books)
+* My [garage](garage)
+* My [cameras](cameras)
+* My [cats](https://devopscat.com/selfies)
 * Some [haikus and rhymes](haikus)
 * [Beer and kombucha labels](beers)
-* My ongoing [book list](books)
-* My [garage listing](garage)
-* My [camera listing](cameras)
-* Some [cat pictures](https://devopscat.com/selfies)
 * In emergency, [break open](in_emergency)
 
 ## City guides
