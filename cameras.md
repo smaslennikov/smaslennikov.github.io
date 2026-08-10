@@ -6,7 +6,7 @@ permalink: /cameras
 
 # Cameras
 
-| | Minox 35 ML | Rollei 35 AF | Rollei 35 SE | Konica Autoreflex TC | Yashica 35 CC | Yashica Electro 35 GSN |
+| | Minox 35 ML | Rollei 35 AF | Rollei 35 SE | Konica Autoreflex TC | Yashica 35 CC | Yashica 35 GSN |
 |-|-|-|-|-|-|-|
 | **Dimensions (mm)** | 100x62x32 | 100x61x33 | 97x60x32 | 136x90x45 | 112x70x55 | 140x89x72 |
 | **Weight** | 195g | 240g | 340g | 750g | 400g | 750g |
