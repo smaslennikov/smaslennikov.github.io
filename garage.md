@@ -4,6 +4,18 @@ title: Garage
 permalink: /garage
 ---
 
+
+<!-- toc -->
+
+- [Cars](#cars)
+- [Motorcycles](#motorcycles)
+- [Boats](#boats)
+- [Sold](#sold)
+    * [Cars](#cars-1)
+    * [Motorcycles](#motorcycles-1)
+
+<!-- tocstop -->
+
 # Cars
 
 | Year | Make | Model | Trans | Owned since | State |
@@ -14,13 +26,10 @@ permalink: /garage
 | 1989 | Ford | Ranger | 4spd+OD | 2019 | replacing trans |
 | 1989 | Ford | [F150 XLT Lariat 4x4](assets/vehicles/f150.jpg) | 4spd+OD | 2021 | replacing engine |
 | 1990 | Subaru | [Loyale](assets/vehicles/loyale.jpeg) | 5spd x push-button 4wd | 2025 | |
-| 1993 | Mazda | [Miata](assets/vehicles/miata.jpg) | 5spd | 2021 | |
 | 1993 | Dodge | Ram 350 15 passenger van | auto | 2025 | |
-| 1995 | Toyota | 4Runner | 5spd | 2023 | selling |
 | 1997 | Dodge | Ram Wagon | auto | 2025 | replacing trans |
-| 1999 | Chevrolet | Express G3 | auto | 2023 | selling |
 | 2003 | BMW | [E46 325xi](assets/vehicles/e46xi.jpg) | 5spd | 2022 | selling |
-| 2009 | Porsche | 997.2 911 4s | 6spd | 2024 | |
+| 2015 | Porsche | Macan S | auto | 2025 | |
 
 # Motorcycles
 
@@ -57,12 +66,16 @@ permalink: /garage
 | 1991 | Ford | Ranger | auto | 2025 | sold |
 | 1993 | Ford | Ranger | 4spd+OD | 2019-19 | sold |
 | 1993 | Saab | [900s](assets/vehicles/saab.jpg) | 5spd | 2022-24 | sold |
+| 1993 | Mazda | [Miata](assets/vehicles/miata.jpg) | 5spd | 2021 | |
 | 1994 | BMW | [E34 530i](assets/vehicles/e34.jpg) | 5spd | | sold |
+| 1995 | Toyota | 4Runner | 5spd | 2023-25 | sold |
 | 1997 | Ford | Explorer Limited | auto | 2020-21 | sold |
+| 1999 | Chevrolet | Express G3 | auto | 2023-26 | sold |
 | 1999 | Hyundai | [Accent](assets/vehicles/hyundai.jpg) | 5spd | 2010-15 | scrapped |
 | 2000 | BMW | [E46 328i](assets/vehicles/e46.jpg) | 5spd | 2017-22 | sold |
 | 2001 | Ford | Crown Victoria | auto | 2022-23 | sold |
 | 2001 | Honda | S2000 | 5spd | 2023-25 | sold |
+| 2009 | Porsche | 997.2 911 4s | 6spd | 2024-26 | |
 
 ## Motorcycles
 

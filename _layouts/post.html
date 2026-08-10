@@ -17,6 +17,10 @@ layout: default
   {{ content }}
 
   <footer class="post-foot">
-    <a href="{{ "/" | relative_url }}">&larr; all writing</a>
+    {% if page.tag == "guide" %}
+      <a href="{{ "/guides" | relative_url }}">&larr; all city guides</a>
+    {% else %}
+      <a href="{{ "/" | relative_url }}">&larr; all writing</a>
+    {% endif %}
   </footer>
 </article>

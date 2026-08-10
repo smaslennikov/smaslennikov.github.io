@@ -256,8 +256,20 @@ hr {
   background: var(--accent);
 }
 
+/* Breaks the rail's continuous left border into groups. */
+.rail__nav-sep {
+  height: 0.9rem;
+  margin: 0.25rem 0;
+}
+
 /* mobile: the vertical rail collapses into a row of pills */
 @media (max-width: 61.99rem) {
+  .rail__nav-sep {
+    flex-basis: 100%;
+    height: 0;
+    margin: 0.15rem 0;
+  }
+
   .rail__nav {
     display: flex;
     flex-wrap: wrap;
@@ -280,6 +292,69 @@ hr {
     border-color: var(--accent);
     color: var(--accent);
   }
+}
+
+/* city guide chips: one per guide post, sitting under the rail's last nav item */
+
+.rail__chips { margin-top: 1.5rem; }
+
+.rail__chips-label {
+  display: block;
+  margin-bottom: 0.55rem;
+  padding-left: 0.9rem;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.rail__chips-label:hover,
+.rail__chips-label:focus-visible { color: var(--accent); }
+
+.rail__chips ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0 0 0 0.9rem;
+  list-style: none;
+}
+
+.rail__chips li { margin: 0; }
+
+.rail__chips li a {
+  display: block;
+  padding: 0.22rem 0.65rem;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: var(--bg-elev);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--ink-2);
+  text-decoration: none;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.rail__chips li a:hover,
+.rail__chips li a:focus-visible {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-wash);
+}
+
+.rail__chips li a[aria-current="page"] {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-wash);
+}
+
+/* The rail's left-hand indent only exists in the vertical layout. */
+@media (max-width: 61.99rem) {
+  .rail__chips-label,
+  .rail__chips ul { padding-left: 0; }
 }
 
 /* creed */
@@ -609,6 +684,18 @@ hr {
 .content th:last-child,
 .content td:last-child { padding-right: 0; }
 
+/* --- home ----------------------------------------------------------------- */
+
+/* Opening paragraph of the front page: serif, a size up, and set slightly wider
+   than the body copy it introduces. */
+.content .lede {
+  margin-bottom: 1.5rem;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  line-height: 1.55;
+  color: var(--ink-2);
+}
+
 /* --- index: post list ----------------------------------------------------- */
 
 .post-list {
@@ -644,34 +731,12 @@ hr {
   font-variant-numeric: tabular-nums;
 }
 
-/* --- index: city chips ---------------------------------------------------- */
-
-.chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 0 0 1.15rem;
-  padding: 0;
-  list-style: none;
-}
-
-.chips a {
-  display: inline-block;
-  padding: 0.3rem 0.8rem;
-  border: 1px solid var(--rule);
-  border-radius: 999px;
-  background: var(--bg-elev);
-  color: var(--ink-2);
-  font-size: 0.85rem;
-  text-decoration: none;
-  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
-}
-
-.chips a:hover,
-.chips a:focus-visible {
-  color: var(--accent);
-  border-color: var(--accent);
-  background: var(--accent-wash);
+/* Sits under a truncated post list — "all writing", feeds, and the like. */
+.content .more-link {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  color: var(--ink-3);
 }
 
 /* --- posts ---------------------------------------------------------------- */

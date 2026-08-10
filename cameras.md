@@ -4,7 +4,7 @@ title: Cameras
 permalink: /cameras
 ---
 
-# Current cameras
+# Cameras
 
 | | Minox 35 ML | Rollei 35 AF | Rollei 35 SE | Konica Autoreflex TC | Yashica 35 CC | Yashica Electro 35 GSN |
 |-|-|-|-|-|-|-|
@@ -16,7 +16,7 @@ permalink: /cameras
 | **Meter** | silicon photodiode | silicon photodiode | CdS, match-LED | dual CdS, needle | CdS | CdS |
 | **Owned since** | seeking | seeking | seeking | 2025 | 2024 | 2024 |
 
-# Legacy
+# Retired
 
 * Nikon N80 & 50mm f/1.8
 * Canon 50D & 50mm f/1.8

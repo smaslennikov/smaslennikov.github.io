@@ -1,5 +1,16 @@
+# Rendered by _layouts/default.html. `divider: true` inserts a gap in the rail;
+# `external: true` opens in a new tab and skips the relative_url filter.
 - name: home
   url: /
+- name: writing
+  url: /writing
+- name: talks & projects
+  url: /talks
+- name: friends
+  url: /friends
+
+- divider: true
+
 - name: garage
   url: /garage
 - name: cameras
@@ -14,5 +25,11 @@
   url: /beers
 - name: memes
   url: /in_emergency
+- name: cats
+  url: https://devopscat.com/selfies
+  external: true
+
+- divider: true
+
 - name: resume
   url: /docs/resume/resume.pdf

@@ -55,14 +55,35 @@
           <nav aria-label="Site">
             <ul class="rail__nav">
               {% for item in site.data.nav %}
-                {% assign here = false %}
-                {% if page.url == item.url %}{% assign here = true %}{% endif %}
-                <li>
-                  <a href="{{ item.url | relative_url }}"{% if here %} aria-current="page"{% endif %}>{{ item.name }}</a>
-                </li>
+                {% if item.divider %}
+                  <li class="rail__nav-sep" aria-hidden="true"></li>
+                {% else %}
+                  {% assign here = false %}
+                  {% if page.url == item.url %}{% assign here = true %}{% endif %}
+                  <li>
+                    <a href="{% if item.external %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}"
+                       {% if here %}aria-current="page"{% endif %}
+                       {% if item.external %}target="_blank" rel="noopener noreferrer"{% endif %}>{{ item.name }}</a>
+                  </li>
+                {% endif %}
               {% endfor %}
             </ul>
           </nav>
+
+          {% assign guides = site.posts | where: "tag", "guide" | sort: "title" %}
+          {% if guides.size > 0 %}
+            <nav class="rail__chips" aria-label="City guides">
+              <a class="rail__chips-label" href="{{ "/guides" | relative_url }}">city guides</a>
+              <ul>
+                {% for guide in guides %}
+                  <li>
+                    <a href="{{ guide.url | relative_url }}"
+                       {% if page.url == guide.url %}aria-current="page"{% endif %}>{{ guide.title }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </nav>
+          {% endif %}
         </div>
 
         <div class="rail__bottom">
