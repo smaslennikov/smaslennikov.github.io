@@ -582,6 +582,35 @@ hr {
 
 .content figure { margin: 1.75rem 0; }
 
+/* inline SVG diagrams (engineer-experience pyramid) — these paint themselves
+   from the theme tokens, so no border/radius treatment like .content img gets */
+.engex-pyramid {
+  display: block;
+  width: 100%;
+  max-width: 38rem;
+  margin: 2rem auto 2.5rem;
+  overflow: visible;
+}
+
+.engex-tier {
+  float: right;
+  width: 13rem;
+  max-width: 38%;
+  margin: 0.35rem 0 1rem 1.75rem;
+}
+
+.clear-right { clear: right; }
+
+@media (max-width: 640px) {
+  .engex-tier {
+    float: none;
+    display: block;
+    width: 10rem;
+    max-width: 60%;
+    margin: 0.5rem auto 1.25rem;
+  }
+}
+
 /* code */
 
 .content code {

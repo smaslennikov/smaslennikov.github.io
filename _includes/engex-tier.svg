@@ -1,0 +1,24 @@
+{%- assign tier = include.tier -%}
+{%- case tier -%}
+  {%- when "compensation" -%}{%- assign label = "Compensation" -%}{%- assign rank = "top" -%}
+  {%- when "growth" -%}{%- assign label = "Growth" -%}{%- assign rank = "third" -%}
+  {%- when "daily-routine" -%}{%- assign label = "Daily routine" -%}{%- assign rank = "second" -%}
+  {%- when "communication" -%}{%- assign label = "Communication" -%}{%- assign rank = "bottom" -%}
+{%- endcase -%}
+<svg class="engex-tier" viewBox="0 0 300 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{{ label }}: the {{ rank }} tier of the engineer's hierarchy of needs">
+  <title>{{ label }} — the {{ rank }} tier of the pyramid</title>
+  <g stroke-linejoin="round">
+    <g fill="var(--ink-3)" fill-opacity="0.13" stroke="var(--ink-3)" stroke-opacity="0.45" stroke-width="1.5">
+      {% if tier != "compensation" %}<polygon points="150,15 184.3,67 115.7,67"/>{% endif %}
+      {% if tier != "growth" %}<polygon points="111.8,73 188.2,73 220.5,122 79.5,122"/>{% endif %}
+      {% if tier != "daily-routine" %}<polygon points="75.5,128 224.5,128 256.7,177 43.3,177"/>{% endif %}
+      {% if tier != "communication" %}<polygon points="39.3,183 260.7,183 295,235 5,235"/>{% endif %}
+    </g>
+    <g fill="var(--accent)" fill-opacity="0.38" stroke="var(--accent)" stroke-width="2.5">
+      {% if tier == "compensation" %}<polygon points="150,15 184.3,67 115.7,67"/>{% endif %}
+      {% if tier == "growth" %}<polygon points="111.8,73 188.2,73 220.5,122 79.5,122"/>{% endif %}
+      {% if tier == "daily-routine" %}<polygon points="75.5,128 224.5,128 256.7,177 43.3,177"/>{% endif %}
+      {% if tier == "communication" %}<polygon points="39.3,183 260.7,183 295,235 5,235"/>{% endif %}
+    </g>
+  </g>
+</svg>

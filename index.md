@@ -11,4 +11,4 @@ I spent seven years at SADA doing infrastructure modernization — migrations, g
 
 These days I run [Cool Consulting, LLC](https://coolconsulting.lol): the same work, fewer layers. I also teach — [mesh radio workshops and talks](/talks) at BSides, SCaLE, and LayerOne — and I still keep office hours for engineers who want a second opinion. If something infrastructure-shaped is stuck, [say hello](mailto:me@slava.lol?Subject=beer%20time). First beer is on me.
 
-Off the clock there's a [garage](/garage) full of silly old cars, a shelf of [film cameras](/cameras), [chess](https://chessand.beer), and an ongoing disagreement with my cats' litter box's firmware.
+Off the clock there's a [garage](/garage) full of old cars and motorcycles, a shelf of [film cameras](/cameras), [chess](https://chessand.beer), and an ongoing disagreement with my cats' litter box's firmware.

@@ -29,7 +29,7 @@ If you're reading this, you probably care about your organization's engineering 
 
 The goal of this blog post is a discussion of retention of talent most crucial to a company's engineering success and progress. In other words, we're talking about a long-term game for your engineering department: short-term engineering needs can be satisfied by reversing the pyramid.
 
-![Engineer's needs pyramid](/assets/posts/engex-engineer-needs.png)
+{% include engex-pyramid.svg %}
 
 Placed on a hierarchy of needs, an engineer's primary needs are high quality interactions. Not to say that engineer's paycheck can be fully substituted by kindness: rather, the former can't replace the latter in a long term proposition.
 
@@ -41,7 +41,7 @@ In the following sections, we'll break down what each part of the pyramid implie
 
 ### Communication
 
-<img align="right" style="margin: 3px; max-width: 40vw" src="/assets/posts/engex-communication.png">
+{% include engex-tier.svg tier="communication" %}
 
 Communication is a crucial component of engineer experience: it's the good and bad of every day that affects people most. This includes interactions with peers, leadership, and the immediate manager. This is also a question of whether managers, peers, and leadership have your back: in client interactions, leadership decisions, even tooling selection. **Engineers and their leaders don't have to like each other or vibe together: but there must be mutual, equal respect and clarity of value.** In fact, maintaining a staff of most likeable people is a major bias, as it reduces diversity of thought.
 
@@ -54,11 +54,11 @@ Clear communication between levels is another basic necessity: purpose of every 
 1. Are there regular knowledge-sharing sessions? Do all engineers and some leadership participate in them?
 1. Is upper leadership paying attention to the quality of *people management skills* within people managers? How?
 
-<nbsp clear="right" />
+<div class="clear-right"></div>
 
 ### Daily routine
 
-<img align="right" style="margin: 3px; max-width: 40vw" src="/assets/posts/engex-daily-routine.png">
+{% include engex-tier.svg tier="daily-routine" %}
 
 Daily routine refers to three categories:
 
@@ -91,11 +91,11 @@ Hands-on engineering work is the kind that requires periods of unbroken focus ti
 1. Do engineers enjoy the work they're asked to do?
 1. Is there a feedback loop for engineer satisfaction? (More on this at the end)
 
-<nbsp clear="right" />
+<div class="clear-right"></div>
 
 ### Growth
 
-<img align="right" style="margin: 3px; max-width: 40vw" src="/assets/posts/engex-growth.png">
+{% include engex-tier.svg tier="growth" %}
 
 When we talk about growth, we're referring to personal and professional growth an engineer can take home and use in the future. All members of an organization should always be motivated to grow their skills: social, business, and technical. It's understandable that this may not happen every single moment of a given time period, but when one looks back **at a time frame of quarters and years, growth should be obvious to both the leadership and the subject.**
 
@@ -121,11 +121,11 @@ All parts of an organization are responsible for engineer growth: **Engineer Man
 * How difficult is it to spend learning and development funds? Are there boundaries or difficult processes?
 * How difficult is it to create and use a research-and-development environment?
 
-<nbsp clear="right" />
+<div class="clear-right"></div>
 
 ### Compensation
 
-<img align="right" style="margin: 3px; max-width: 40vw" src="/assets/posts/engex-compensation.png">
+{% include engex-tier.svg tier="compensation" %}
 
 At the top of the pyramid is compensation. When we're talking about increasing or decreasing it from a set target, that target is market value. While this is the factor simplest for leadership to provide, it's also the least impactful attribute for an engineer's long term commitment to the role. Consider an engineer whose other needs in the pyramids are unfulfilled: their communications are lacking or toxic, their day-to-day is full of tedious manual processes and repetitive tasks, they don't feel like they're growing skills. This causes **stagnation, ignorance, lower quality work, which ideally causes the engineer to leave before they lose too much of themselves.**
 
@@ -140,7 +140,7 @@ There must always be a clear reason for differences in compensation: market turm
 * Does everyone in your organization have a clear understanding of the reason for disparity in their compensation, whether low or high?
 * Do engineers' raises have clear parity with merit?
 
-<nbsp clear="right" />
+<div class="clear-right"></div>
 
 ### Feedback process
 
